@@ -1,7 +1,7 @@
 {
-	"name": "Sample Theme",
+	"name": "my-obsidian-theme",
 	"version": "1.0.0",
 	"minAppVersion": "1.0.0",
-	"author": "Obsidian",
-	"authorUrl": "https://obsidian.md"
+	"author": "lb-fes",
+	"authorUrl": "https://github.com/lb-fes"
 }
