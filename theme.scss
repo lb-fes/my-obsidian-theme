@@ -1,3 +1,6 @@
+// 编译并监视
+// sass --watch theme.scss E:\backup\常用文档\.obsidian\themes\my-theme\theme.css --no-source-map
+
 /*日间和夜间*/
 body {
 	/* visual studio code dark plus 配色 */
@@ -124,79 +127,80 @@ body {
 /*代码块*/
 .cm-hmd-codeblock {
 	color: var(--vsc-bracket);
-}
-.cm-keyword {
-	color: #C586C0;
-}
-.cm-atom {
-	color: #CE9178;
-}
-.cm-string {
-	color: #CE9178;
-}
-.cm-string-2 {
-	color: #CE9178;
-}
-.cm-number {
-	color: #DCDCAA;
-}
-.cm-qualifier {
-	color: #DCDCAA;
-}
-.cm-builtin {
-	color: #DCDCAA;
-}
-.cm-bracket {
-	color: #DCDCAA;
-}
-/* 会导致实时预览模式下标题变为黄色 */
-/*.cm-header {
-	color: #DCDCAA;
-}*/
-.cm-def {
-	color: #DCDCAA;
-}
-.cm-variable {
-	color: #9CDCFE;
-}
-.cm-variable-2 {
-	color: #9CDCFE;
-}
-.cm-variable-3 {
-	color: #d7ba7d;
-}
-.cm-property {
-	color: #9CDCFE;
-}
-.cm-attribute {
-	color: #9CDCFE;
-}
-.cm-operator {
-	color: #D4D4D4;
-}
-.cm-meta {
-	color: #D4D4D4;
-}
-.cm-hr {
-	color: #D4D4D4;
-}
-.cm-comment {
-	color: #6A9955;
-}
-.cm-quote {
-	color: #6A9955;
-}
-.cm-tag {
-	color: #569CD6;
-}
-.cm-link {
-	color: #569CD6;
-}
-.cm-negative {
-	color: #F44747;
-}
-.cm-positive {
-	color: #B5CEA8;
+
+	&.cm-keyword {
+		color: #C586C0;
+	}
+	&.cm-atom {
+		color: #CE9178;
+	}
+	&.cm-string {
+		color: #CE9178;
+	}
+	&.cm-string-2 {
+		color: #CE9178;
+	}
+	&.cm-number {
+		color: #DCDCAA;
+	}
+	&.cm-qualifier {
+		color: #DCDCAA;
+	}
+	&.cm-builtin {
+		color: #DCDCAA;
+	}
+	&.cm-bracket {
+		color: #DCDCAA;
+	}
+	/* 会导致实时预览模式下标题变为黄色 */
+	/*.cm-header {
+        color: #DCDCAA;
+    }*/
+	&.cm-def {
+		color: #DCDCAA;
+	}
+	&.cm-variable {
+		color: #9CDCFE;
+	}
+	&.cm-variable-2 {
+		color: #9CDCFE;
+	}
+	&.cm-variable-3 {
+		color: #d7ba7d;
+	}
+	&.cm-property {
+		color: #9CDCFE;
+	}
+	&.cm-attribute {
+		color: #9CDCFE;
+	}
+	&.cm-operator {
+		color: #D4D4D4;
+	}
+	&.cm-meta {
+		color: #D4D4D4;
+	}
+	&.cm-hr {
+		color: #D4D4D4;
+	}
+	&.cm-comment {
+		color: #6A9955;
+	}
+	&.cm-quote {
+		color: #6A9955;
+	}
+	&.cm-tag {
+		color: #569CD6;
+	}
+	&.cm-link {
+		color: #569CD6;
+	}
+	&.cm-negative {
+		color: #F44747;
+	}
+	&.cm-positive {
+		color: #B5CEA8;
+	}
 }
 
 /* 代码块 阅读模式 */
@@ -226,5 +230,6 @@ body {
 }
 
 /* 光标 代码块上的*/
-/* 暂时改不了，可以考虑在日间模式下不在代码块上使用深色背景 */
-
+.markdown-source-view.mod-cm6 .cm-content {
+	caret-color: #adaeac;
+}
