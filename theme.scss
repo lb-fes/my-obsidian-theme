@@ -41,7 +41,6 @@ body {
 	/* Code */
 	--code-size: 0.9em;
 	--code-background: #1e1e1e; /* 行内代码和代码块的背景颜色 */
-	/*--code-normal: ; !* 没有高亮的语法 *!*/
 	--code-comment: var(--vsc-comment);
 	--code-keyword: var(--vsc-keyword);
 	--code-operator: var(--vsc-operator);
@@ -66,6 +65,8 @@ body {
 	--link-unresolved-decoration-color: red;
 	/* 表格 */
 	--table-border-color: var(--blockquote-border-color);
+	/* 光标 */
+	--cursor-color-blockquote: #adaeac;
 
 }
 /*日间*/
@@ -76,13 +77,16 @@ body {
 	--background-secondary: #fafafa;
 	/* 选中文本时的背景颜色 */
 	--text-selection: #0e6bdd91;
-	
-	
+	/* 引用 */
 	--blockquote-border-color-custom: #dfe2e5;
 
 	/* 行内代码 */
 	--inline-code-border-color: #e7eaed;
 	--inline-code-background-color: #f3f4f4;
+	/* 大纲 */
+	--inline-code-outline-background-color: var(--background-secondary);
+	--inline-code-outline-border-color: #808080b3;
+	--outline-current-title-background-color: #e7e7e7;
 }
 /*夜间*/
 .theme-dark {
@@ -97,25 +101,30 @@ body {
 	/* 行内代码 */
 	--inline-code-border-color: #e7eaed4a;
 	--inline-code-background-color: #77777730;
+	/* 大纲 */
+	--inline-code-outline-background-color: var(--background-primary);
+	--inline-code-outline-border-color: #808080b3;
+	--outline-current-title-background-color: #313233;
 }
-
-/*行内代码*/
-/* 实时预览 */
+/* 行内代码 实时预览 */
 .cm-s-obsidian span.cm-inline-code {
 	background-color: var(--inline-code-background-color);
 	border: 1px solid var(--inline-code-border-color);
 	border-radius: 3px;
-	padding: 1px 2px 2px 2px;
+	padding: 2px;
 }
-/* 阅读模式 */
+/* 行内代码 阅读模式 */
 .markdown-rendered code {
 	background-color: var(--inline-code-background-color);
-	border: 1px solid var(--inline-code-border-color);
+	border: 1px solid var(--inline-code-outline-border-color);
 	border-radius: 3px;
-	padding: 1px 2px 2px 2px;
+	padding: 2px;
 }
 
 /*代码块*/
+.cm-hmd-codeblock {
+	color: var(--vsc-bracket);
+}
 .cm-keyword {
 	color: #C586C0;
 }
@@ -189,6 +198,7 @@ body {
 .cm-positive {
 	color: #B5CEA8;
 }
+
 /* 代码块 阅读模式 */
 .token.attr-value {
 	color: var(--vsc-string);
@@ -196,3 +206,25 @@ body {
 .token.attr-name {
 	color: var(--vsc-attribute);
 }
+
+/* 行内代码上的外部链接 阅读模式*/
+.external-link code{
+	color: var(--link-external-color);
+}
+
+/* 大纲 标题内联代码 */
+.quiet-outline code {
+	margin: 1px 0;
+	background-color: var(--inline-code-outline-background-color);
+	border-radius: 3px;
+	border: 1px solid var(--inline-code-outline-border-color);
+	padding: 2px;
+}
+/* 大纲 当前所在标题*/
+.n-tree-node.located p {
+	background-color: var(--outline-current-title-background-color);
+}
+
+/* 光标 代码块上的*/
+/* 暂时改不了，可以考虑在日间模式下不在代码块上使用深色背景 */
+
