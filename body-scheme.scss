@@ -1,0 +1,43 @@
+body {
+	/* 字体 */
+	--font-text-theme: "Open Sans", "Clear Sans", "Helvetica Neue", Helvetica,Arial, "Segoe UI Emoji", sans-serif;
+
+	/* Blockquotes */
+	--blockquote-border-thickness: 4px;
+	--blockquote-border-color: var(--blockquote-border-color-custom);
+
+	/* Checkboxes */
+	--checkbox-marker-color: white; /* 复选框中的 √ */
+	--checkbox-color: rgb(0, 117, 255);
+	--checkbox-color-hover: var(--checkbox-color);
+	/* Code */
+	--code-size: 0.9em;
+	--code-background: #1e1e1e; /* 行内代码和代码块的背景颜色 */
+	--code-comment: var(--vsc-comment);
+	--code-keyword: var(--vsc-keyword);
+	--code-operator: var(--vsc-operator);
+	--code-property: var(--vsc-property);	/* 不显示颜色，是编译器的问题*/
+	--code-string: var(--vsc-string);
+	--code-tag: var(--vsc-tag);
+	--code-value: var(--vsc-atom);
+	--code-function: var(--vsc-def);
+	/* 标题 */
+	--h5-size: 1.15em;
+	--h6-size: 1.1em;
+	/* 链接 */
+	--link-color: #4183C4;
+	--link-color-hover: var(--link-color);
+	--link-decoration: none;
+	/* 外部链接 */
+	--link-external-color: var(--link-color);
+	--link-external-color-hover: var(--link-color);
+	--link-external-decoration: none;
+	/* 链接的文件不存在 */
+	--link-unresolved-color: var(--link-color);
+	--link-unresolved-decoration-color: red;
+	/* 表格 */
+	--table-border-color: var(--blockquote-border-color);
+	/* 光标 */
+	--cursor-color-blockquote: #adaeac;
+
+}

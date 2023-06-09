@@ -1,0 +1,18 @@
+.theme-light {
+	/* 工具栏、标签页、设置页右边部分*/
+	--background-primary: white;
+	/* 左侧边栏、右侧边栏、设置中的左边部分*/
+	--background-secondary: #fafafa;
+	/* 选中文本时的背景颜色 */
+	--text-selection: #0e6bdd91;
+	/* 引用 */
+	--blockquote-border-color-custom: #dfe2e5;
+
+	/* 行内代码 */
+	--inline-code-border-color: #808080b3;
+	--inline-code-background-color: #f3f4f4;
+	/* 大纲 */
+	--inline-code-outline-background-color: var(--background-secondary);
+	--inline-code-outline-border-color: #808080b3;
+	--outline-current-title-background-color: #e7e7e7;
+}

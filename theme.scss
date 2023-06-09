@@ -1,114 +1,15 @@
 // 编译并监视
 // sass --watch theme.scss E:\backup\常用文档\.obsidian\themes\my-theme\theme.css --no-source-map
+@import "vsc-scheme";
 
 /*日间和夜间*/
-body {
-	/* visual studio code dark plus 配色 */
-	--vsc-keyword: #c586c0; /*关键字*/
-	--vsc-atom: #ce9178; /*原子类型*/
-	--vsc-string: var(--vsc-atom);
-	--vsc-var: #9cdcfe;
-	--vsc-property: var(--vsc-var);
-	--vsc-attribute: var(--vsc-var);
-	--vsc-number: #dcdcaa; /*数字*/
-	--vsc-qualifier: var(
-		--vsc-number
-	); /*限定符（public、private、protected、static、final、const）*/
-	--vsc-builtin: var(--vsc-number); /*内建*/
-	--vsc-bracket: var(--vsc-number); /*括号*/
-	--vsc-header: var(--vsc-number);
-	--vsc-def: var(--vsc-number); /*函数声明*/
-	--vsc-operator: #d4d4d4; /*操作符*/
-	--vsc-meta: var(
-		--vsc-operator
-	); /*元信息，例如编程语言的特殊指令、注释或其他非代码的辅助性文本。*/
-	--vsc-hr: var(--vsc-operator);
-	--vsc-comment: #6a9955; /*注释*/
-	--vsc-quote: var(--vsc-comment);
-	--vsc-tag: #569cd6; /*tag: 标签元素*/
-	--vsc-link: var(--vsc-tag);
-	--vsc-negative: #f44747;
-	--vsc-positive: #b5cea8;
-	/* 字体 */
-	--font-text-theme: "Open Sans", "Clear Sans", "Helvetica Neue", Helvetica,
-		Arial, "Segoe UI Emoji", sans-serif;
+@import "body-scheme";
 
-	/* Blockquotes */
-	--blockquote-border-thickness: 4px;
-	--blockquote-border-color: var(--blockquote-border-color-custom);
-
-	/* Checkboxes */
-	--checkbox-marker-color: white; /* 复选框中的 √ */
-	--checkbox-color: rgb(0, 117, 255);
-	--checkbox-color-hover: var(--checkbox-color);
-	/* Code */
-	--code-size: 0.9em;
-	--code-background: #1e1e1e; /* 行内代码和代码块的背景颜色 */
-	--code-comment: var(--vsc-comment);
-	--code-keyword: var(--vsc-keyword);
-	--code-operator: var(--vsc-operator);
-	--code-property: var(--vsc-property);	/* 不显示颜色，是编译器的问题*/
-	--code-string: var(--vsc-string);
-	--code-tag: var(--vsc-tag);
-	--code-value: var(--vsc-atom);
-	--code-function: var(--vsc-def);
-	/* 标题 */
-	--h5-size: 1.15em;
-	--h6-size: 1.1em;
-	/* 链接 */
-	--link-color: #4183C4;
-	--link-color-hover: var(--link-color);
-	--link-decoration: none;
-	/* 外部链接 */
-	--link-external-color: var(--link-color);
-	--link-external-color-hover: var(--link-color);
-	--link-external-decoration: none;
-	/* 链接的文件不存在 */
-	--link-unresolved-color: var(--link-color);
-	--link-unresolved-decoration-color: red;
-	/* 表格 */
-	--table-border-color: var(--blockquote-border-color);
-	/* 光标 */
-	--cursor-color-blockquote: #adaeac;
-
-}
 /*日间*/
-.theme-light {
-	/* 工具栏、标签页、设置页右边部分*/
-	--background-primary: white;
-	/* 左侧边栏、右侧边栏、设置中的左边部分*/
-	--background-secondary: #fafafa;
-	/* 选中文本时的背景颜色 */
-	--text-selection: #0e6bdd91;
-	/* 引用 */
-	--blockquote-border-color-custom: #dfe2e5;
-
-	/* 行内代码 */
-	--inline-code-border-color: #e7eaed;
-	--inline-code-background-color: #f3f4f4;
-	/* 大纲 */
-	--inline-code-outline-background-color: var(--background-secondary);
-	--inline-code-outline-border-color: #808080b3;
-	--outline-current-title-background-color: #e7e7e7;
-}
+@import "light-theme";
 /*夜间*/
-.theme-dark {
-	/* 工具栏、标签页、设置页右边部分*/
-	--background-primary: #444654;
-	/* 左侧边栏、右侧边栏、设置中的左边部分*/
-	--background-secondary: #202123;
-	/* 选中文本时的背景颜色 */
-	--text-selection: #0e6bdd91;
+@import "dark-theme";
 
-	--blockquote-border-color-custom: #aaaaaa80;
-	/* 行内代码 */
-	--inline-code-border-color: #e7eaed4a;
-	--inline-code-background-color: #77777730;
-	/* 大纲 */
-	--inline-code-outline-background-color: var(--background-primary);
-	--inline-code-outline-border-color: #808080b3;
-	--outline-current-title-background-color: #313233;
-}
 /* 行内代码 实时预览 */
 .cm-s-obsidian span.cm-inline-code {
 	background-color: var(--inline-code-background-color);
@@ -124,9 +25,10 @@ body {
 	padding: 2px;
 }
 
-/*代码块*/
+/* 代码块 实时预览 */
 .cm-hmd-codeblock {
-	color: var(--vsc-bracket);
+
+	color: white;
 
 	&.cm-keyword {
 		color: #C586C0;
@@ -150,7 +52,7 @@ body {
 		color: #DCDCAA;
 	}
 	&.cm-bracket {
-		color: #DCDCAA;
+		color: var(--vsc-bracket);
 	}
 	/* 会导致实时预览模式下标题变为黄色 */
 	/*.cm-header {
@@ -203,33 +105,122 @@ body {
 	}
 }
 
-/* 代码块 阅读模式 */
-.token.attr-value {
-	color: var(--vsc-string);
+/* 代码块 CSS 阅读模式 */
+.language-css {
+	.token {
+		&.string {
+			color: var(--vsc-string);
+		}
+		// {}、
+		&.punctuation {
+			color: var(--vsc-bracket);
+		}
+		// 颜色关键字
+		&.color {
+			color: var(--vsc-keyword);
+
+			// 十六进制颜色
+			&.hexcode {
+				color: var(--vsc-tag);
+			}
+		}
+		// 属性值单位：px
+		&.unit {
+			color: var(--vsc-string);
+		}
+		// 数字
+		&.number {
+			color: var(--vsc-number);
+		}
+		// !important
+		&.important {
+			color: var(--vsc-tag);
+		}
+		// 变量
+		&.variable {
+			color: var(--vsc-var);
+		}
+		// @规则
+		&.atrule {
+			color: var(--vsc-keyword)
+		}
+		// 属性
+		&.property {
+			color: var(--vsc-property)
+		}
+		// 函数
+		&.function {
+			color: var(--vsc-number)
+		}
+	}
 }
-.token.attr-name {
-	color: var(--vsc-attribute);
+/* 代码块 html 阅读模式*/
+.language-html {
+	color: white;
+	.token {
+		// <>
+		&.punctuation {
+			color: var(--vsc-tag)
+		}
+		// 特性
+		&.attr-name {
+			color: var(--vsc-attribute)
+		}
+		// 特性值
+		&.attr-value {
+			// 特性值中的 ""
+			.punctuation {
+				color: var(--vsc-string)
+			}
+		}
+	}
+}
+/* 代码块 javascript 阅读模式*/
+.language-js {
+	.token {
+		&.punctuation {
+			color: var(--vsc-bracket)
+		}
+	}
+}
+/* 代码块 typescript 阅读模式*/
+.language-ts,
+.language-typescript {
+	.token {
+		&.keyword {
+			color: var(--vsc-keyword)
+		}
+	}
 }
 
-/* 行内代码上的外部链接 阅读模式*/
-.external-link code{
-	color: var(--link-external-color);
-}
+.external-link {
 
-/* 大纲 标题内联代码 */
-.quiet-outline code {
-	margin: 1px 0;
-	background-color: var(--inline-code-outline-background-color);
-	border-radius: 3px;
-	border: 1px solid var(--inline-code-outline-border-color);
-	padding: 2px;
-}
-/* 大纲 当前所在标题*/
-.n-tree-node.located p {
-	background-color: var(--outline-current-title-background-color);
+	/* 行内代码上的外部链接 阅读模式*/
+	code{
+		color: var(--link-external-color);
+	}
 }
 
 /* 光标 代码块上的*/
 .markdown-source-view.mod-cm6 .cm-content {
 	caret-color: #adaeac;
 }
+
+/* 大纲  */
+.quiet-outline {
+	// 标题内联代码
+	code {
+		margin: 1px 0;
+		background-color: var(--inline-code-outline-background-color);
+		border-radius: 3px;
+		border: 1px solid var(--inline-code-outline-border-color);
+		padding: 2px;
+	}
+}
+
+/* 大纲 当前所在标题*/
+.n-tree-node.located p {
+	background-color: var(--outline-current-title-background-color);
+}
+
+

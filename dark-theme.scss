@@ -1,0 +1,17 @@
+.theme-dark {
+	/* 工具栏、标签页、设置页右边部分*/
+	--background-primary: #444654;
+	/* 左侧边栏、右侧边栏、设置中的左边部分*/
+	--background-secondary: #202123;
+	/* 选中文本时的背景颜色 */
+	--text-selection: #0e6bdd91;
+
+	--blockquote-border-color-custom: #aaaaaa80;
+	/* 行内代码 */
+	--inline-code-border-color: #e7eaed4a;
+	--inline-code-background-color: #77777730;
+	/* 大纲 */
+	--inline-code-outline-background-color: var(--background-primary);
+	--inline-code-outline-border-color: #808080b3;
+	--outline-current-title-background-color: #313233;
+}
