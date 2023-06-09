@@ -1,0 +1,88 @@
+/* 行内代码 实时预览 */
+.cm-s-obsidian span.cm-inline-code {
+	background-color: var(--inline-code-background-color);
+	border: 1px solid var(--inline-code-border-color);
+	border-radius: 3px;
+	padding: 2px;
+}
+
+
+/* 代码块 实时预览 */
+.cm-hmd-codeblock {
+
+	color: white;
+
+	&.cm-keyword {
+		color: #C586C0;
+	}
+	&.cm-atom {
+		color: #CE9178;
+	}
+	&.cm-string {
+		color: #CE9178;
+	}
+	&.cm-string-2 {
+		color: #CE9178;
+	}
+	&.cm-number {
+		color: #DCDCAA;
+	}
+	&.cm-qualifier {
+		color: #DCDCAA;
+	}
+	&.cm-builtin {
+		color: #DCDCAA;
+	}
+	&.cm-bracket {
+		color: var(--vsc-bracket);
+	}
+	/* 会导致实时预览模式下标题变为黄色 */
+	/*.cm-header {
+        color: #DCDCAA;
+    }*/
+	&.cm-def {
+		color: #DCDCAA;
+	}
+	&.cm-variable {
+		color: #9CDCFE;
+	}
+	&.cm-variable-2 {
+		color: #9CDCFE;
+	}
+	&.cm-variable-3 {
+		color: #d7ba7d;
+	}
+	&.cm-property {
+		color: #9CDCFE;
+	}
+	&.cm-attribute {
+		color: #9CDCFE;
+	}
+	&.cm-operator {
+		color: #D4D4D4;
+	}
+	&.cm-meta {
+		color: #D4D4D4;
+	}
+	&.cm-hr {
+		color: #D4D4D4;
+	}
+	&.cm-comment {
+		color: #6A9955;
+	}
+	&.cm-quote {
+		color: #6A9955;
+	}
+	&.cm-tag {
+		color: #569CD6;
+	}
+	&.cm-link {
+		color: #569CD6;
+	}
+	&.cm-negative {
+		color: #F44747;
+	}
+	&.cm-positive {
+		color: #B5CEA8;
+	}
+}

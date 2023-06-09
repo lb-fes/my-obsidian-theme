@@ -1,0 +1,96 @@
+
+/* 行内代码*/
+.markdown-rendered code {
+	background-color: var(--inline-code-background-color);
+	border: 1px solid var(--inline-code-outline-border-color);
+	border-radius: 3px;
+	padding: 2px;
+}
+
+/* 代码块 CSS 阅读模式 */
+.language-css {
+	.token {
+		&.string {
+			color: var(--vsc-string);
+		}
+		// {}、
+		&.punctuation {
+			color: var(--vsc-bracket);
+		}
+		// 颜色关键字
+		&.color {
+			color: var(--vsc-keyword);
+
+			// 十六进制颜色
+			&.hexcode {
+				color: var(--vsc-tag);
+			}
+		}
+		// 属性值单位：px
+		&.unit {
+			color: var(--vsc-string);
+		}
+		// 数字
+		&.number {
+			color: var(--vsc-number);
+		}
+		// !important
+		&.important {
+			color: var(--vsc-tag);
+		}
+		// 变量
+		&.variable {
+			color: var(--vsc-var);
+		}
+		// @规则
+		&.atrule {
+			color: var(--vsc-keyword)
+		}
+		// 属性
+		&.property {
+			color: var(--vsc-property)
+		}
+		// 函数
+		&.function {
+			color: var(--vsc-number)
+		}
+	}
+}
+/* 代码块 html 阅读模式*/
+.language-html {
+	color: white;
+	.token {
+		// <>
+		&.punctuation {
+			color: var(--vsc-tag)
+		}
+		// 特性
+		&.attr-name {
+			color: var(--vsc-attribute)
+		}
+		// 特性值
+		&.attr-value {
+			// 特性值中的 ""
+			.punctuation {
+				color: var(--vsc-string)
+			}
+		}
+	}
+}
+/* 代码块 javascript 阅读模式*/
+.language-js {
+	.token {
+		&.punctuation {
+			color: var(--vsc-bracket)
+		}
+	}
+}
+/* 代码块 typescript 阅读模式*/
+.language-ts,
+.language-typescript {
+	.token {
+		&.keyword {
+			color: var(--vsc-keyword)
+		}
+	}
+}
