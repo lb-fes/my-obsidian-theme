@@ -1,4 +1,4 @@
-/* 行内代码 实时预览 */
+/* 行内代码 */
 .cm-s-obsidian span.cm-inline-code {
 	background-color: var(--inline-code-background-color);
 	border: 1px solid var(--inline-code-border-color);
@@ -6,8 +6,7 @@
 	padding: 2px;
 }
 
-
-/* 代码块 实时预览 */
+/* 代码块 */
 .cm-hmd-codeblock {
 
 	color: white;
@@ -36,10 +35,6 @@
 	&.cm-bracket {
 		color: var(--vsc-bracket);
 	}
-	/* 会导致实时预览模式下标题变为黄色 */
-	/*.cm-header {
-        color: #DCDCAA;
-    }*/
 	&.cm-def {
 		color: #DCDCAA;
 	}
@@ -86,3 +81,5 @@
 		color: #B5CEA8;
 	}
 }
+
+

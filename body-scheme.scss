@@ -40,4 +40,7 @@ body {
 	/* 光标 */
 	--cursor-color-blockquote: #adaeac;
 
+	// Ctrl+F、Ctrl+Shift+F，高亮匹配的搜索结果
+	--highlight-mix-blend-mode: lighten !important;
+	--text-highlight-bg: #ffff00;
 }
