@@ -1,6 +1,10 @@
 body {
 	/* 字体 */
-	--font-text-theme: "Open Sans", "Clear Sans", "Helvetica Neue", Helvetica,Arial, "Segoe UI Emoji", sans-serif;
+	--font-interface-override: '??';
+	--font-text-override: 'Open Sans';
+	--font-print-override: '??';
+	--font-monospace-override: 'JetBrains Mono';
+
 
 	/* Blockquotes */
 	--blockquote-border-thickness: 4px;
@@ -43,4 +47,7 @@ body {
 	// Ctrl+F、Ctrl+Shift+F，高亮匹配的搜索结果
 	--highlight-mix-blend-mode: lighten !important;
 	--text-highlight-bg: #ffff00;
+
+	/* 行高 */
+	--line-height-normal: 2;
 }
