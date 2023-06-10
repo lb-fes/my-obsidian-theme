@@ -5,7 +5,6 @@ body {
 	--font-print-override: '宋体';
 	--font-monospace-override: 'JetBrains Mono NL';
 
-
 	/* Blockquotes */
 	--blockquote-border-thickness: 4px;
 	--blockquote-border-color: var(--blockquote-border-color-custom);
@@ -51,7 +50,7 @@ body {
 
 	// Ctrl+F、Ctrl+Shift+F，高亮匹配的搜索结果
 	--highlight-mix-blend-mode: normal !important;
-	--text-highlight-bg: #ffff00;
+	//--text-highlight-bg: #ffff00;
 
 	/* 行高 */
 	//--line-height-normal: 2;
