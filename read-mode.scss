@@ -1,11 +1,15 @@
 
-/* 行内代码*/
-.markdown-rendered code {
-	background-color: var(--inline-code-background-color);
-	border: 1px solid var(--inline-code-outline-border-color);
-	border-radius: 3px;
-	padding: 2px;
+.markdown-rendered {
+	/* 行内代码*/
+	code {
+		background-color: var(--inline-code-background-color);
+		border: 1px solid var(--inline-code-outline-border-color);
+		border-radius: 3px;
+		padding: 1px;
+		font-size: calc(var(--font-text-size) - 4px);
+	}
 }
+
 
 /* 代码块 CSS 阅读模式 */
 .language-css {

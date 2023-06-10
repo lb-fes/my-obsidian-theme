@@ -3,7 +3,8 @@
 	background-color: var(--inline-code-background-color);
 	border: 1px solid var(--inline-code-border-color);
 	border-radius: 3px;
-	padding: 2px;
+	padding: 1px;
+	font-size: calc(var(--font-text-size) - 4px);
 }
 
 /* 代码块 */
