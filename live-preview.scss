@@ -1,10 +1,26 @@
-/* 行内代码 */
-.cm-s-obsidian span.cm-inline-code {
-	background-color: var(--inline-code-background-color);
-	border: 1px solid var(--inline-code-border-color);
-	border-radius: 3px;
-	padding: 1px;
-	font-size: calc(var(--font-text-size) - 4px);
+
+.cm-s-obsidian {
+	/* 内联代码 */
+	span.cm-inline-code {
+		background-color: var(--inline-code-background-color);
+		border: 1px solid var(--inline-code-border-color);
+		border-radius: 3px;
+		padding: 1px;
+		font-size: calc(var(--font-text-size) - 4px);
+	}
+	/* 代码块 开始*/
+	div.HyperMD-codeblock-begin-bg {
+		background-color: #343541;
+	}
+	/* 代码块 结束*/
+	div.HyperMD-codeblock-end {
+		height: 10px;
+	}
+}
+/* 代码块语言提示 */
+.markdown-source-view.mod-cm6 .code-block-flair {
+	top: 0;
+	color: #d9d9e3;
 }
 
 /* 代码块 */
