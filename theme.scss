@@ -1,5 +1,7 @@
 // 编译并监视
 // sass --watch theme.scss E:\backup\文档\.obsidian\themes\my-theme\theme.css --no-source-map
+// 压缩代码：
+// sass -s compressed theme.scss E:\backup\文档\.obsidian\themes\my-theme\theme.css --no-source-map
 @import "vsc-scheme";
 
 /*日间和夜间*/
