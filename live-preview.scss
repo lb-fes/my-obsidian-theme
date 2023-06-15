@@ -91,11 +91,15 @@
 	&.cm-link {
 		color: #569CD6;
 	}
+	// diff 语言
 	&.cm-negative {
 		color: #F44747;
+		background-color: #400600;
 	}
+	// diff 语言
 	&.cm-positive {
 		color: #B5CEA8;
+		background-color: #074420;
 	}
 	&.cm-type {
 		color: var(--vsc-type);
